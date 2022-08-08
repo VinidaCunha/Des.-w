@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>cálculo</title>
+
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+
+<body>
+    <h1>Numeros</h1>
+    <button onclick="calcular()">Clique e calcule!</button>
+
+    <section id="res">
+        <p>Resultado:</p>
+    </section>
+
+    <script>
+        window.alert('Bem-vindo(a)')
+        
+        function calcular(){
+        let n1 = Number(window.prompt('Digite um número:'))
+        let n2 = Number(window.prompt('Digite outro:'))
+        let res = document.querySelector('section#res')
+        soma = n1 + n2
+
+        res.innerHTML = `<p>A soma de ${n1} e ${n2} é ${soma}!</p>`
+        }
+    </script>
+</body>
+</html>
