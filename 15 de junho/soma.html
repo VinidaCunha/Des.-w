@@ -15,8 +15,13 @@
 <body>
     <h1>Numeros</h1>
     <button onclick="calcular()">Clique e calcule!</button>
-
     <section id="res">
+        <p>Resultado:</p>
+    </section>
+
+    <h1>Média do aluno</v1></h1>
+    <button onclick="media()">Média</button>
+    <section id="sit">
         <p>Resultado:</p>
     </section>
 
@@ -24,13 +29,26 @@
         window.alert('Bem-vindo(a)')
         
         function calcular(){
-        let n1 = Number(window.prompt('Digite um número:'))
-        let n2 = Number(window.prompt('Digite outro:'))
-        let res = document.querySelector('section#res')
-        soma = n1 + n2
+            let n1 = Number(window.prompt('Digite um número:'))
+            let n2 = Number(window.prompt('Digite outro:'))
+            let res = document.querySelector('section#res')
+            soma = n1 + n2
 
-        res.innerHTML = `<p>A soma de ${n1} e ${n2} é <strong>${soma}</strong>!</p>`
+            res.innerHTML = `<p>A soma de ${n1} e ${n2} é <strong>${soma}</strong>!</p>`
         }
+
+        function media(){
+            let no = window.prompt('Nome do aluno: ')
+            let a = Number(window.prompt(`Primeira nota:`))
+            let b = Number(window.prompt(`Outra nota`))
+            med = (a + b)/2
+
+            let res = document.getElementById('sit')
+            res.innerHTML = `<p> Média do aluno: ${no}`
+            res.innerHTML += `<p>As notas foram: <mark>${a} e ${b}</mark></p>`
+            res.innerHTML += `<p>A média será <strong>${med}</strong></p>`
+        }
+
     </script>
 </body>
 </html>
