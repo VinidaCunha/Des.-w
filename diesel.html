@@ -24,16 +24,16 @@
         let prec = 0;
         function abasteca() {
             let tipo = window.prompt(`Qual diesel deseja?`)
-            let prc = window.prompt(`Qual valor quer pagar? S10: 6.8 ou S500: 6.6`)
+            let prc = window.prompt(`Qual valor quer pagar? S10: 6,8 ou S500: 6,6`)
             let valor = window.prompt(`Qual valor pra encher o tanque?`)
             
             let res = document.getElementById ('val')
             if(prc = 6,8){
-                if (valor> 530) {
+                if (valor > 530) {
                     res.innerHTML = `<p>Não é possivel, tanque cheio!</p>`
                 }
                 else{
-                    res.innerHTML = `<p>Abasteceu por por R$${valor} com diesel ${tipo}</p>!`
+                    res.innerHTML = `<p>Abasteceu por por R$${valor} com diesel ${tipo}!</p>`
                 }
             }
             if(prc = 6,6){
@@ -41,7 +41,7 @@
                     res.innerHTML = `<p>Não é possivel, tanque cheio!</p>`
                 }
                 else{
-                    res.innerHTML = `<p>Abasteceu por R$${valor} com diesel ${tipo}</p>!`
+                    res.innerHTML = `<p>Abasteceu por R$${valor} com diesel ${tipo}!</p>`
                 }
             }
         }
